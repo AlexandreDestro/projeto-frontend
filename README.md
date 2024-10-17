@@ -1,22 +1,22 @@
-# Nome do projeto
-projeto frontend
+# Plataforma De Doações: Conectando doações com quem mais precisa
+
+Projeto da disciplina de Front End do professor Lucas Ferreira da UNISATC.
+
 ### Integrantes:
 - Alexandre Destro
 - Bianca Alves
 - Pedro Lucas
 - William Mesquita
 
-Plataforma de Doações: Conectando doações com quem mais precisa. 
-
-Descrição do Projeto: 
+**Descrição do Projeto:**
 
 A Plataforma de Doações conecta doadores de itens como alimentos, roupas e móveis com pessoas que precisam desses recursos. Através de uma interface simples e intuitiva, doadores podem cadastrar suas doações, enquanto interessados podem visualizar, reservar e organizar a entrega de itens em sua área. O sistema utiliza geolocalização para facilitar a logística, assegurando que as doações cheguem rapidamente a quem precisa, promovendo solidariedade e eficiência nas comunidades. 
 
-Objetivo do Projeto: 
+**Objetivo do Projeto:**
 
 O objetivo principal do nosso projeto é combater o desperdício de recursos e apoiar pessoas em situações de necessidade, conectando doadores e beneficiários de forma prática e segura. A plataforma promove a redistribuição eficiente de diversos itens, ajudando a reduzir o impacto ambiental e promovendo a solidariedade local. 
 
-Estrutura do Projeto: 
+**Estrutura do Projeto:** 
 
 Tela de Login/Registro: Usuários podem se cadastrar ou fazer login, com opção de autenticação via redes sociais. 
 
@@ -36,19 +36,19 @@ Tela de Avaliações: Feedback e avaliação de doadores e beneficiários após 
 
  
 
-Cliente/Público-alvo: 
+**Cliente/Público-alvo:**
 
 Pessoas interessadas em doar itens que não utilizam mais, bem como indivíduos ou famílias que estão precisando de doações. Os doadores utilizam a plataforma por conveniência, pois ela simplifica o processo de doação, além de proporcionar a satisfação de ajudar diretamente sua comunidade. Já os beneficiários usam o app para encontrar rapidamente itens essenciais sem burocracia e com a praticidade de ver o que está disponível perto de onde moram, através da geolocalização. A plataforma atende tanto doadores que buscam facilidade e eficiência, quanto beneficiários que têm uma necessidade real e urgente de recursos. 
 
  
 
-Tecnologias, bibliotecas e frameworks: 
+**Tecnologias, bibliotecas e frameworks:**
 
 Decidimos usar React como framework principal em conjunto com Vite.js. Para o design, estamos pesquisando sobre o Radix UI e TailwindCSS.  
 
  
 
-Características/Diferenciais importantes do projeto: 
+**Características/Diferenciais importantes do projeto:**
 
 Nosso projeto se destaca por sua abordagem prática e acessível, com foco em criar uma experiência de doação rápida e sem complicações. Nosso projeto coloca a simplicidade como prioridade e sua interface é projetada para ser extremamente intuitiva, permitindo que tanto doadores quanto beneficiários realizem suas ações com poucos cliques. 
 
