@@ -57,3 +57,5 @@ Um diferencial chave é a integração de geolocalização, que facilita o encon
 A plataforma também prioriza a segurança, com a implementação de um sistema de verificação de usuários, garantindo que os envolvidos sejam reais e confiáveis. A comunicação entre doadores e beneficiários é feita através de um sistema de mensagens internas, preservando a privacidade dos usuários. As notificações automáticas também são um grande diferencial, pois mantêm os usuários atualizados sobre novas doações e interações, incentivando um ciclo de doação contínuo e eficaz. 
 
 Essas características não apenas fazem nossa plataforma ser mais prática e segura, mas também promovem uma cultura de compartilhamento consciente e eficiente dentro das comunidades, criando um impacto positivo tanto social quanto ambiental. 
+
+test
