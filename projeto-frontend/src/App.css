@@ -1,0 +1,77 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+div .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+div #login-box {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  border-radius: 3px;
+  border-color: #c1d4d6;
+  border-width: 1px;
+  border-style: solid;
+}
+
+div #login-box button {
+  cursor: pointer;
+}
+
+#login-box > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+#login-box > div:nth-child(1) h3 {
+  color: #036772;
+  text-align: center;
+}
+
+#login-box > div:nth-child(1) button {
+  background-color: #3d9db3;
+  color: white;
+  border: none;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  height: 30px;
+}
+
+#login-box > div:nth-child(2) {
+  display: flex;
+  align-content: row;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #e1eaeb;
+  padding-right: 19px;
+}
+
+#login-box > div:nth-child(2) > button {
+  color: #2ca8c5;
+  background-color: white;
+  border-color: #d4dd60;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#login-box label {
+  color: #647a7e;
+}
+
+#login-box div p {
+  color: #949494;
+  margin-right: 5px;
+}
