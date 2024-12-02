@@ -1,22 +1,18 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { LoginProvider, LoginContext } from './stores/LoginContext';
+import { useContext } from "react";
 
-import './index.css'
-
-import Header from './layouts/Header'
-
+import Header from './layouts/Header/Header'
+import Login from './pages/Login/Login'
 import Dashboard from './pages/Dashboard'
 import DonationRegistration from './pages/DonationRegistration'
 import DonationView from './pages/DonationView'
 import ItemDetails from './pages/ItemDetails'
 import Notifications from './pages/Notifications'
 import Contacts from './pages/Contacts'
+import './index.css'
 
-
-
-//import Login from './pages/Login/Login'
-
-
-const router = createBrowserRouter([
+const loggedIn = createBrowserRouter([
     {
         path: '/', element : <Header />,
         children: [
@@ -30,6 +26,14 @@ const router = createBrowserRouter([
     },
 ]);
 
+
+const loggedOut = createBrowserRouter(
+    [{ path: '/', element : <Login /> }]);
+
+function WebRouter(){
+    const { userData } = useContext(LoginContext);
+    return <RouterProvider router={!userData ? loggedOut : loggedIn} /> }
+
 export default function App() {
-    return <RouterProvider router={router} />;
-}
+    return <LoginProvider>
+                <WebRouter/></LoginProvider>; }

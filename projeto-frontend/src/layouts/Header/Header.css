@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box; /* Ensure padding is included in element size */
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh; 
+  width: 100vw; 
+}
+
+.side_bar, main {
+  padding: 30px;
+  overflow: hidden; /* Prevent scrollbars */
+  display: flex;
+  flex-shrink: 1; /* Allow content to shrink if necessary */
+}
+
+.side_bar {
+    flex: 1;
+    position: relative;
+    align-items: top;
+    justify-content: center;
+    /* background-color: lightblue; Tests only*/
+    align-content: end;
+}
+
+
+main {
+    flex: 5;
+}
+
+/* Create small side bar to the right */
+.side_bar::after {
+    content: ''; /* Empty content to create the pseudo-element */
+    position: absolute;
+    right: 0; /* Position the border on the right side */
+    top: 20px; /* Adjust the gap at the top */
+    bottom: 20px; /* Adjust the gap at the bottom */
+    width: 1px; /* Width of the border */
+    background-color: #22b43b; /* Color of the border */
+  }
