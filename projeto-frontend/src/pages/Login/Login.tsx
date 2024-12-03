@@ -14,18 +14,21 @@ function Login() {
 
   const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
     const formData = new FormData(event.currentTarget);
 
     const username = formData.get("username") as string;
     const password = formData.get("password") as string;
 
-    if (username === '' || password === '' ) { setError('Ambos os campos são obrigatórios!');
-    } else { setError(''); }
+    if (username === '' || password === '' ) { 
+      setError('Ambos os campos são obrigatórios!');
+    } else {
+      setError('');
+    }
 
     try {
       if (username !== '' || password !== '') { 
         const userData = await testLogin(username, password);
+        console.log(userData);    
         login(userData);
       }
     } catch {

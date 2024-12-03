@@ -1,17 +1,38 @@
 import { createContext, useState } from "react";
 
-export const LoginContext = createContext({
-  userData: null, login: (data) => {}, logout: () => {} });
+type User = {
+  id: number;
+  username: string;
+  email: string;
+  name: string;
+  
+}
 
-export function LoginProvider({ children }) {
-  const [userData, setUserData] = useState(null);
+interface AuthenticationProps {
+  user:  User | null,
+  login (user: User ): void,
+  logout(): void,
+}
 
-  function login(data) { setUserData(data); }
+export const LoginContext = createContext<AuthenticationProps>({
+  user: null, login: () => {}, logout: () => {} });
 
-  function logout() { setUserData(null); }
+export function LoginProvider({ children }: { children: React.ReactNode}) {
+  const emptyUser = {
+    id: 0,
+    username: '',
+    name: '',
+    email:''
+  };
+  const [user, setUserData] = useState<User>(emptyUser);
+
+  function login(user: User) { console.log('entered'); setUserData(user); }
+
+  function logout() { setUserData(emptyUser); }
 
   return (
-    <LoginContext.Provider value={{ userData, login, logout }}> 
-        {children} </LoginContext.Provider>
+    <LoginContext.Provider value={{ user, login, logout }}> 
+        {children} 
+    </LoginContext.Provider>
   );
 }

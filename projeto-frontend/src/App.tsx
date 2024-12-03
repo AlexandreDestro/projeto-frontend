@@ -31,9 +31,11 @@ const loggedOut = createBrowserRouter(
     [{ path: '/', element : <Login /> }]);
 
 function WebRouter(){
-    const { userData } = useContext(LoginContext);
-    return <RouterProvider router={!userData ? loggedOut : loggedIn} /> }
+    const { user } = useContext(LoginContext);
+    return <RouterProvider router={!user ? loggedOut : loggedIn} /> }
 
 export default function App() {
     return <LoginProvider>
-                <WebRouter/></LoginProvider>; }
+                <WebRouter/>
+                </LoginProvider>; 
+                }
