@@ -5,7 +5,7 @@ import { useContext } from "react";
 import Header from './layouts/Header/Header'
 import Login from './pages/Login/Login'
 import Dashboard from './pages/Dashboard'
-import DonationRegistration from './pages/DonationRegistration'
+import DonationRegistration from './pages/DonationRegistration/DonationRegistration'
 import DonationView from './pages/DonationView'
 import ItemDetails from './pages/ItemDetails'
 import Notifications from './pages/Notifications'
