@@ -1,0 +1,29 @@
+.loginContainer {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  
+  .loginButton {
+    display: flex;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    cursor: 'pointer';
+    transition: background-color 0.3s ease, border 0.3s ease;
+  }
+  
+  .loginButton:hover {
+    background-color: #94c8ff;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  
