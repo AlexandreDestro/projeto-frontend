@@ -1,0 +1,41 @@
+.donations-container {
+  text-align: center;
+  padding: 30px;
+  margin-left: 150px;
+}
+
+.donations-container h2 {
+  color: #28a745;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.donations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Três colunas */
+  gap: 30px; /* Espaçamento entre os itens */
+  justify-items: center;
+}
+
+.donation-item {
+  text-align: center;
+  max-width: 200px; /* Ajuste de largura dos itens */
+}
+
+.donation-item img {
+  width: 100%; /* Imagem ocupa toda a largura do contêiner */
+  height: 150px; 
+  border-radius: 8px; 
+  object-fit: cover; /* Ajusta a imagem para caber no contêiner */
+}
+
+
+.donation-item h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.donation-item p {
+  font-size: 14px;
+  color: #666;
+}

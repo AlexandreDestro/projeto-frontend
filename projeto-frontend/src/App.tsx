@@ -6,7 +6,7 @@ import Header from './layouts/Header/Header';
 import Login from './pages/Login/Login';
 import Dashboard from './pages/Dashboard';
 import DonationRegistration from './pages/DonationRegistration/DonationRegistration';
-import DonationView from './pages/DonationView';
+import DonationView from './pages/DonationView/DonationView';
 import ItemDetails from './pages/ItemDetails';
 import Notifications from './pages/Notifications';
 import Contacts from './pages/Contacts';
@@ -22,10 +22,9 @@ const loggedIn = createBrowserRouter([
             { path: '/', element: <Dashboard /> },
             { path: '/DonationRegistration', element: <DonationRegistration /> },
             { path: '/DonationView', element: <DonationView /> },
-            { path: '/ItemDetails', element: <ItemDetails /> },
+            { path: '/ItemDetails/:id', element: <ItemDetails /> }, // Alterando para usar o parâmetro :id
             { path: '/Notifications', element: <Notifications /> },
             { path: '/Contacts', element: <Contacts /> },
-            
         ],
     },
 ]);
