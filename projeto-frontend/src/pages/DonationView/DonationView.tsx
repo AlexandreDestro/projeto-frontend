@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './DonationView.css';
 
 const donations = [
-  { id: '1', title: 'Roupas de inverno', location: 'Criciúma - SC', image: '/images/roupas.jpg' },
+  { id: '1', title: 'Roupas de inverno', location: 'Criciúma - SC', image: '/images/roupas.png' },
   { id: '2', title: 'Cesta básica', location: 'Criciúma - SC', image: '/images/cestabasica.png' },
   { id: '3', title: 'Brinquedos', location: 'Criciúma - SC', image: '/images/brinquedos.png' },
   { id: '4', title: 'Livros', location: 'Içara - SC', image: '/images/livros.jpg' },
