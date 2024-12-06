@@ -14,7 +14,7 @@ export default function Header(){
                         <Button component={Link} to="/">Dashboard</Button>
                         <Button component={Link} to="/DonationRegistration">Registro de doações</Button>
                         <Button component={Link} to="/DonationView">Visualização de Doações</Button>
-                        <Button component={Link} to="/ItemDetails">Detalhes do Item</Button>
+                        {/* <Button component={Link} to="/ItemDetails">Detalhes do Item</Button> */}
                         <Button component={Link} to="/Notifications">Notificações</Button>
                         <Button component={Link} to="/Contacts">Contatos</Button>
                     </ButtonGroup>        
