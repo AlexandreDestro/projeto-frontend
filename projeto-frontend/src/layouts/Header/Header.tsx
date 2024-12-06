@@ -14,7 +14,7 @@ export default function Header(){
         <>
         <div className="container">
             <div className="side_bar">
-                <div id='top-content'>Welcome, {user.username}.</div>
+                <div id='top-content'>Seja bem-vindo <b>{user.username}</b></div>
                 <div id='middle-content'></div>
                 <ButtonGroup  orientation="vertical" variant="text" aria-label="Basic button group" sx={{'& .MuiButton-root': {
                 color: "#4fc54b", borderColor: "#22b43b", padding: "20px"}}}>

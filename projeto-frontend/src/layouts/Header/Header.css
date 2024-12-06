@@ -51,7 +51,10 @@ main {
 #top-content{
   font-size: 30px;
   font-family: 'Playfair Display', serif;
-  
+  color: #22b43b;
+  border-bottom: 1px solid #22b43b;
+  align-self: center;
+
   min-height:75px;
   align-content: center;
 
