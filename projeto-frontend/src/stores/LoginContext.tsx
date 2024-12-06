@@ -3,30 +3,31 @@ import { createContext, useState } from "react";
 type User = {
   id: number;
   username: string;
+  password: string;
   email: string;
-  name: string;
-  
 }
 
+const emptyUser = {
+  id: 0,
+  username: '',
+  password: '',
+  email: '',
+};
+
 interface AuthenticationProps {
-  user:  User | null,
+  user:  User,
   login (user: User ): void,
   logout(): void,
 }
 
 export const LoginContext = createContext<AuthenticationProps>({
-  user: null, login: () => {}, logout: () => {} });
+  user: emptyUser, login: () => {}, logout: () => {} });
 
 export function LoginProvider({ children }: { children: React.ReactNode}) {
-  const emptyUser = {
-    id: 0,
-    username: '',
-    name: '',
-    email:''
-  };
+  
   const [user, setUserData] = useState<User>(emptyUser);
 
-  function login(user: User) { console.log('entered'); setUserData(user); }
+  function login(user: User) { setUserData(user); }
 
   function logout() { setUserData(emptyUser); }
 

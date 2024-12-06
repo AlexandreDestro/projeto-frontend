@@ -12,18 +12,15 @@ import ItemDetails from './pages/ItemDetails';
 import Notifications from './pages/Notifications';
 import Contacts from './pages/Contacts';
 import './index.css';
-import LoginButton from "./components/loginButton/loginButton";
+
+
+import users from './data/user.json';
 
 // Rotas para usuários logados
 const loggedIn = createBrowserRouter([
     {
         path: '/',
-        element: (
-            <>
-                <Header />
-                <LoginButton />
-            </>
-        ),
+        element: <Header />,
         children: [
             { path: '/', element: <Dashboard /> },
             { path: '/DonationRegistration', element: <DonationRegistration /> },
@@ -31,12 +28,12 @@ const loggedIn = createBrowserRouter([
             { path: '/ItemDetails/:donationId', element: <ItemDetails /> }, 
             { path: '/Notifications', element: <Notifications /> },
             { path: '/Contacts', element: <Contacts /> },
-            { path: '/Login', element: <Login /> },
         ],
     },
 ]);
 
 // Rotas para usuários não logados
+
 const loggedOut = createBrowserRouter([
     { path: '/', element: <Login /> },
 ]);
@@ -44,7 +41,13 @@ const loggedOut = createBrowserRouter([
 // Função que seleciona o roteador baseado no estado do usuário
 function WebRouter() {
     const { user } = useContext(LoginContext);
-    return <RouterProvider router={user ? loggedIn : loggedOut} />;
+
+    //yeah, it verifies it twice, it would be dumber verifing by id !== 0.
+    //Login padrão: admin, 123456
+    return <RouterProvider router={users.some((obj) =>
+        JSON.stringify(obj) === JSON.stringify(user)) ? loggedIn : loggedOut} />;
+    // Caso queira acessar as telas pós login sem informar o usuário, apenas comente o return de cima e descomente o de baixo. 
+    //return <RouterProvider router={matchedUser ? loggedOut : loggedIn } />;
 }
 
 // Componente principal
