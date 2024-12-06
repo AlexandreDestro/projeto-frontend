@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import "./DonationRegistration.css"; // Arquivo de estilo
 
+interface donation  {
+ name: string,
+ description: string,
+ category: string,
+ location: string,
+ image: string | ArrayBuffer | null
+}
+
 function DonationRegistration() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<donation>({
     name: "",
     description: "",
     category: "",
@@ -18,38 +26,41 @@ function DonationRegistration() {
     }));
   };
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    setFormData((prevData) => ({
-      ...prevData,
-      image: file,
-    }));
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setFormData((prevData) => ({
+          ...prevData,
+          image: reader.result, // Agora é compatível com o tipo definido
+        }));
+      };
+      reader.readAsDataURL(file); // Converte o arquivo em uma URL de dados
+    }
   };
-
+  
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (formData.image) {
-      const formDataObject = new FormData();
-      formDataObject.append("name", formData.name);
-      formDataObject.append("description", formData.description);
-      formDataObject.append("category", formData.category);
-      formDataObject.append("location", formData.location);
-      formDataObject.append("image", formData.image);
-
-      // Simulação de envio ao backend
-      console.log("Doação cadastrada com:", {
-        name: formData.name,
-        description: formData.description,
-        category: formData.category,
-        location: formData.location,
-        image: formData.image.name,
-      });
-    } else {
-      alert("Por favor, anexe uma imagem!");
+  
+    const { name, description, category, location, image } = formData;
+    if (!name || !description || !category || !location || !image) {
+      alert("Por favor, preencha todos os campos antes de enviar!");
       return;
     }
-
+  
+    const existingDonations = JSON.parse(localStorage.getItem("donations") || "[]");
+    const newDonation = {
+      name,
+      description,
+      category,
+      location,
+      image, // Salva a URL de dados da imagem
+    };
+  
+    localStorage.setItem("donations", JSON.stringify([...existingDonations, newDonation]));
+  
     alert("Doação cadastrada com sucesso!");
     setFormData({
       name: "",
@@ -59,6 +70,8 @@ function DonationRegistration() {
       image: null,
     });
   };
+  
+
 
   return (
     <div className="register-donation-container">

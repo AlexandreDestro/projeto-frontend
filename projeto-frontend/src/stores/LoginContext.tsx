@@ -30,6 +30,7 @@ export function LoginProvider({ children }: { children: React.ReactNode}) {
 
   function logout() { setUserData(emptyUser); }
 
+
   return (
     <LoginContext.Provider value={{ user, login, logout }}> 
         {children} 

@@ -1,34 +1,28 @@
-/*function ItemDetails(){
-    return(
-        <>
-            <p>ItemDetails</p>
-        </>
-    );
-}
-
-export default ItemDetails;*/
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const ItemDetails: React.FC = () => {
-  const { id } = useParams(); // Obtém o ID do item da URL
+  const { donationId } = useParams<{ donationId: string }>(); // Garante que donationId é uma string
 
-  const donationDetails = {
-    1: { title: 'Roupas de inverno', description: 'Descrição detalhada de roupas de inverno' },
-    2: { title: 'Cesta básica', description: 'Descrição detalhada de cesta básica' },
-    3: { title: 'Brinquedos', description: 'Descrição detalhada de brinquedos' },
-    4: { title: 'Livros', description: 'Descrição detalhada de livros' },
-    5: { title: 'Roupas infantis', description: 'Descrição detalhada de roupas infantis' },
-    6: { title: 'Sofá', description: 'Descrição detalhada do sofá' },
-  };
+  const existingDonations = JSON.parse(localStorage.getItem("donations") || "[]");
 
-  const item = donationDetails[id];
+  // Verifica se donationId existe e converte para número
+  const itemIndex = donationId ? parseInt(donationId, 10) : NaN;
+
+
+  // Verifica se itemIndex é válido e acessa o item
+  const item = !isNaN(itemIndex) ? existingDonations[itemIndex] : null;
+
+  if (!item) {
+    return <p>Doação não encontrada!</p>;
+  }
 
   return (
     <div>
-      <h1>{item?.title}</h1>
-      <p>{item?.description}</p>
+      <h1>{item.name}</h1>
+      <p>{item.description}</p>
+      <p>{item.location}</p>
+      <img src={item.image} alt={item.name} />
     </div>
   );
 };

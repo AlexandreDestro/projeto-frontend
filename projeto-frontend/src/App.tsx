@@ -28,7 +28,7 @@ const loggedIn = createBrowserRouter([
             { path: '/', element: <Dashboard /> },
             { path: '/DonationRegistration', element: <DonationRegistration /> },
             { path: '/DonationView', element: <DonationView /> },
-            { path: '/ItemDetails/:id', element: <ItemDetails /> }, 
+            { path: '/ItemDetails/:donationId', element: <ItemDetails /> }, 
             { path: '/Notifications', element: <Notifications /> },
             { path: '/Contacts', element: <Contacts /> },
             { path: '/Login', element: <Login /> },
@@ -49,6 +49,17 @@ function WebRouter() {
 
 // Componente principal
 const App: React.FC = () => {
+    const donationsSample = [
+        { name: 'Roupas de inverno', description: "Descrição da doação", location: 'Criciúma - SC', image: '/images/roupas.png' },
+        { name: 'Cesta básica', description: "Descrição da doação", location: 'Criciúma - SC', image: '/images/cestabasica.png' },
+        { name: 'Brinquedos', description: "Descrição da doação", location: 'Criciúma - SC', image: '/images/brinquedos.png' },
+        { name: 'Livros', description: "Descrição da doação", location: 'Içara - SC', image: '/images/livros.jpg' },
+        { name: 'Roupas infantis', description: "Descrição da doação", location: 'Içara - SC', image: '/images/roupainfantil.png' },
+        { name: 'Sofá', description: "Descrição da doação", location: 'Içara - SC', image: '/images/sofa.jpg' },
+      ];
+      
+      localStorage.setItem("donations", JSON.stringify(donationsSample));
+      
     return (
         <LoginProvider>
             <WebRouter />

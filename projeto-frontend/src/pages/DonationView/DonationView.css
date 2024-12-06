@@ -12,7 +12,7 @@
 
 .donations-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Três colunas */
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas */
   gap: 30px; /* Espaçamento entre os itens */
   justify-items: center;
 }
