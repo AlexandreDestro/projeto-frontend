@@ -24,10 +24,11 @@ html, body {
 
 .side_bar {
     flex: 1;
+    display: flex;
+    min-width: 260px;
+    flex-direction: column;
     position: relative;
     align-items: top;
-    justify-content: center;
-    /* background-color: lightblue; Tests only*/
     align-content: end;
 }
 
@@ -38,11 +39,29 @@ main {
 
 /* Create small side bar to the right */
 .side_bar::after {
-    content: ''; /* Empty content to create the pseudo-element */
-    position: absolute;
-    right: 0; /* Position the border on the right side */
-    top: 20px; /* Adjust the gap at the top */
-    bottom: 20px; /* Adjust the gap at the bottom */
-    width: 1px; /* Width of the border */
-    background-color: #22b43b; /* Color of the border */
-  }
+  content: ''; /* Empty content to create the pseudo-element */
+  position: absolute;
+  right: 0; /* Position the border on the right side */
+  top: 20px; /* Adjust the gap at the top */
+  bottom: 20px; /* Adjust the gap at the bottom */
+  width: 1px; /* Width of the border */
+  background-color: #22b43b; /* Color of the border */
+}
+
+#top-content{
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+  
+  min-height:75px;
+  align-content: center;
+
+  /* settings doesn't allow for selecting text.
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+#middle-content{
+  min-height: 200px;
+  aspect-ratio: 4/5;
+}  
