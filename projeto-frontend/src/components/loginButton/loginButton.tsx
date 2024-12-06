@@ -1,16 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import do useNavigate
 import styles from './LoginButton.module.css'; // Import correto do CSS Module
 
 const LoginButton: React.FC = () => {
+    const navigate = useNavigate(); // Hook para redirecionar
+
     const handleLoginClick = () => {
         console.log("Login button clicked");
-        // Lógica para redirecionamento
+        navigate('/login'); // Redireciona para a rota de login
+
     };
 
     return (
         <div className={styles.loginContainer}>
             <button
-                className={styles.loginButton} // Referência ao estilo do CSS Module
+                className={styles.loginButton}
                 onClick={handleLoginClick}
             >
                 Fazer Login

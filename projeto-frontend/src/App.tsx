@@ -1,3 +1,4 @@
+import React from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LoginProvider, LoginContext } from './stores/LoginContext';
 import { useContext } from "react";
@@ -17,14 +18,20 @@ import LoginButton from "./components/loginButton/loginButton";
 const loggedIn = createBrowserRouter([
     {
         path: '/',
-        element: <Header />,
+        element: (
+            <>
+                <Header />
+                <LoginButton />
+            </>
+        ),
         children: [
             { path: '/', element: <Dashboard /> },
             { path: '/DonationRegistration', element: <DonationRegistration /> },
             { path: '/DonationView', element: <DonationView /> },
-            { path: '/ItemDetails/:id', element: <ItemDetails /> }, // Alterando para usar o parâmetro :id
+            { path: '/ItemDetails/:id', element: <ItemDetails /> }, 
             { path: '/Notifications', element: <Notifications /> },
             { path: '/Contacts', element: <Contacts /> },
+            { path: '/Login', element: <Login /> },
         ],
     },
 ]);
@@ -44,13 +51,7 @@ function WebRouter() {
 const App: React.FC = () => {
     return (
         <LoginProvider>
-            <div>
-                {/* Componente WebRouter gerencia as rotas */}
-                <WebRouter />
-
-                {/* Botão de Login e conteúdo */}
-                <LoginButton />
-            </div>
+            <WebRouter />
         </LoginProvider>
     );
 };
