@@ -8,17 +8,25 @@ Projeto da disciplina de Front End do professor Lucas Ferreira da UNISATC.
 - Pedro Lucas
 - William Mesquita
 
-**Descrição do Projeto:**
+## **Descrição do Projeto:**
 
 A Plataforma de Doações conecta doadores de itens como alimentos, roupas e móveis com pessoas que precisam desses recursos. Através de uma interface simples e intuitiva, doadores podem cadastrar suas doações, enquanto interessados podem visualizar, reservar e organizar a entrega de itens em sua área. O sistema utiliza geolocalização para facilitar a logística, assegurando que as doações cheguem rapidamente a quem precisa, promovendo solidariedade e eficiência nas comunidades. 
 
-**Objetivo do Projeto:**
+# **Execultar o Projeto:**
+
+- Baixe o código fonte ou clone o repositório
+- Na pasta Principal abra o terminal e instale as dependências com 'npm install'
+- Inicie o site no terminal com 'npm run dev'
+- Aguarde o Inicialização e acesse o link exibido
+
+
+### **Objetivo do Projeto:**
 
 O objetivo principal do nosso projeto é combater o desperdício de recursos e apoiar pessoas em situações de necessidade, conectando doadores e beneficiários de forma prática e segura. A plataforma promove a redistribuição eficiente de diversos itens, ajudando a reduzir o impacto ambiental e promovendo a solidariedade local. 
 
-**Estrutura do Projeto:** 
+### **Estrutura do Projeto:** 
 
-Tela de Login/Registro: Usuários podem se cadastrar ou fazer login, com opção de autenticação via redes sociais. 
+Tela de Login/Registro: Usuários podem se cadastrar ou fazer login (no momento apenas login como admin está disponível)
 
 Tela Inicial (Dashboard): Exibe as doações mais recentes e itens disponíveis por proximidade. 
 
@@ -28,11 +36,9 @@ Tela de Visualização de Doações: Lista de itens disponíveis, com filtros po
 
 Tela de Detalhes do Item: Mostra informações detalhadas de cada item, incluindo fotos, descrição e botão para reservar. 
 
-Tela de Contato: Permite que os usuários entrem em contato com o doador por meio de um sistema de mensagens interno. 
+Tela de Contato: Tela de contato simples com os contatos dos criadores do projeto
 
 Tela de Notificações: Notificações sobre novas doações na área do usuário ou atualizações de itens reservados. 
-
-Tela de Avaliações: Feedback e avaliação de doadores e beneficiários após a entrega. 
 
  
 
