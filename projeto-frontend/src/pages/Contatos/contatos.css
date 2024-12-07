@@ -1,0 +1,45 @@
+.contact-page-minimal {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  
+  .contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .contact-card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.2s;
+  }
+  
+  .contact-card:hover {
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  

@@ -10,7 +10,7 @@ import DonationRegistration from './pages/DonationRegistration/DonationRegistrat
 import DonationView from './pages/DonationView/DonationView';
 import ItemDetails from './pages/ItemDetails';
 import Notifications from './pages/Notifications';
-import Contacts from './pages/Contacts';
+import Contacts from './pages/Contatos/contatos';
 import './index.css';
 
 
