@@ -12,7 +12,7 @@ Projeto da disciplina de Front End do professor Lucas Ferreira da UNISATC.
 
 A Plataforma de Doações conecta doadores de itens como alimentos, roupas e móveis com pessoas que precisam desses recursos. Através de uma interface simples e intuitiva, doadores podem cadastrar suas doações, enquanto interessados podem visualizar, reservar e organizar a entrega de itens em sua área. O sistema utiliza geolocalização para facilitar a logística, assegurando que as doações cheguem rapidamente a quem precisa, promovendo solidariedade e eficiência nas comunidades. 
 
-# **Execultar o Projeto:**
+# **Executar o Projeto:**
 
 - Baixe o código fonte ou clone o repositório
 - Na pasta Principal abra o terminal e instale as dependências com 'npm install'
